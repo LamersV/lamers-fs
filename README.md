@@ -8,7 +8,6 @@ O pacote é publicado no GitHub Packages sob o escopo `@lamersv`. É necessário
 
 ```
 @lamersv:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
 ```
 
 Após configurar, instale com o gerenciador de sua preferência.
