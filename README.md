@@ -202,4 +202,4 @@ Isso permite importar todas as operações de alto nível diretamente da raiz do
 
 ## Licença
 
-MIT. Consulte o arquivo de licença no repositório oficial.
+MIT. Consulte o arquivo de licença no repositório oficial. [LICENSE](./LICENSE)

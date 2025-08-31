@@ -206,4 +206,4 @@ This lets you import high‑level operations from the package root and only the 
 
 ## License
 
-MIT.
+MIT. See the license file in the official repository. [LICENSE](./LICENSE)
