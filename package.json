@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@lamersv/clean": "^1.0.1",
-    "@lamersv/error": "^1.0.0"
+    "@lamersv/error": "^1.0.1"
   },
   "exports": {
     ".": {
