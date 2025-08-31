@@ -1,0 +1,45 @@
+{
+  "name": "@lamersv/fs",
+  "version": "1.0.0",
+  "author": "LamersV",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "yarn build",
+    "pub": "yarn publish --registry https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@lamersv/clean": "^1.0.1",
+    "@lamersv/error": "^1.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.js",
+      "default": "./dist/utils/index.js",
+      "types": "./dist/utils/index.d.ts"
+    }
+  },
+  "publishConfig": {
+    "@lamersv:registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LamersV/lamers-fs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LamersV/lamers-fs/issues"
+  },
+  "homepage": "https://github.com/LamersV/lamers-fs#readme"
+}
