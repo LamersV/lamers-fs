@@ -2,10 +2,6 @@
 
 Este pacote fornece utilitários de sistema de arquivos em TypeScript para criação e escrita de arquivos, links e diretórios, leitura e verificação de paths, movimentação e renomeação, remoção segura e obtenção de metadados. Também expõe utilidades de apoio para detecção de MIME e extensão, sanitização de nomes, validações e hash MD5, além de classes de erro padronizadas para arquivos e diretórios. A API foi pensada para chamadas simples e diretas em scripts e aplicações Node.js, com retornos previsíveis e tratamento de erros consistente.
 
-Repositório: https://github.com/LamersV/lamers-fs  
-Homepage: https://github.com/LamersV/lamers-fs#readme  
-Versão: 1.0.0
-
 ## Instalação
 
 O pacote é publicado no GitHub Packages sob o escopo `@lamersv`. É necessário configurar um token de acesso com permissão de leitura de packages e incluir a autenticação no `.npmrc` do seu projeto apontando para o registro do GitHub.

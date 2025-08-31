@@ -2,8 +2,6 @@
 
 File‑system utilities for Node.js/TypeScript: create/write files and directories, create links, read paths and metadata, move/rename, safe delete, plus helper utilities for MIME/extension detection, filename sanitization, validations, and MD5 hashing. Errors are normalized with `FileError` and `DirectoryError` for consistent handling in scripts and apps.
 
-Version: 1.0.0
-
 ## Installation
 
 This package is published under the `@lamersv` scope. Configure GitHub Packages auth in your project `.npmrc`:
