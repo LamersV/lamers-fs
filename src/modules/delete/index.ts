@@ -26,14 +26,14 @@ export const deleteDir = async (path: string, options?: RmOptions): Promise<void
   }
 }
 
-export const deleteFile = async (path: string): Promise<void> => {
+export const deleteFile = async (path: string, options?: RmOptions): Promise<void> => {
   try {
     if (!existsSync(path)) throw new FileError("Arquivo não encontrado", {
       code: "ENOENT",
       data: { path },
     });
 
-    await rm(path);
+    await rm(path, options);
   }
   catch (error) {
     throw new FileError(error, {

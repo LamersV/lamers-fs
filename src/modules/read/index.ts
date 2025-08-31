@@ -2,15 +2,11 @@ import { access, constants, readdir, readFile as fsReadFile, realpath } from "fs
 import { Dirent, ObjectEncodingOptions, existsSync as exsSync } from "fs";
 import { DirectoryError, FileError } from "../../utils/exceptions";
 
-export const exists = async (path: string): Promise<boolean> => {
-  try {
-    await access(path, constants.W_OK | constants.R_OK);
-    return true;
-  }
-  catch (error) {
-    return false;
-  }
-}
+export const exists = (p: string) => access(p, constants.F_OK).then(() => true).catch(() => false);
+
+export const existsReadable = (p: string) => access(p, constants.R_OK).then(() => true).catch(() => false);
+
+export const existsWritable = (p: string) => access(p, constants.W_OK).then(() => true).catch(() => false);
 
 export const existsSync = (path: string): boolean => {
   try {

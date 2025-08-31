@@ -1,8 +1,10 @@
 import { FileError } from "../../utils/exceptions";
 import { rename as fsRename } from "fs/promises";
+import { deleteDir } from "../delete";
 import { makeDir } from "../write";
 import { existsSync } from "fs";
 import { dirname } from "path";
+import { copy } from "./copy";
 
 export const rename = async (oldPath: string, newPath: string) => {
   try {
@@ -14,12 +16,23 @@ export const rename = async (oldPath: string, newPath: string) => {
     const folderName = dirname(newPath);
     if (!existsSync(folderName)) await makeDir(folderName);
 
-    await fsRename(oldPath, newPath);
+    await baseRename(oldPath, newPath);
   }
   catch (error) {
     throw new FileError(error, {
       code: error.code,
       data: { ...error.data, oldPath, newPath },
     });
+  }
+}
+
+const baseRename = async (oldPath: string, newPath: string) => {
+  try {
+    await fsRename(oldPath, newPath);
+  }
+  catch (error) {
+    if (error?.code !== 'EXDEV') throw error;
+    await copy(oldPath, newPath);
+    await deleteDir(oldPath, { recursive: true, force: true });
   }
 }
