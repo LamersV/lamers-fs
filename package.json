@@ -1,6 +1,6 @@
 {
   "name": "@lamersv/fs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "LamersV",
   "main": "dist/index.js",
   "license": "MIT",
